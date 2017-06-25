@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Temples list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for temple in temples %}
+            <tr>
+                <td><a href="{{ path('temple_show', { 'id': temple.id }) }}">{{ temple.id }}</a></td>
+                <td>{{ temple.name }}</td>
+                <td>{{ temple.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('temple_show', { 'id': temple.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('temple_edit', { 'id': temple.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('temple_new') }}">Create a new temple</a>
+        </li>
+    </ul>
+{% endblock %}
