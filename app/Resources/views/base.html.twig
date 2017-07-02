@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}          
+        {% stylesheets 'assets/vendor/bootstrap/dist/css/bootstrap.min.css' filter='cssrewrite'
+               'assets/vendor/components-font-awesome/css/font-awesome.css'%}
+               <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link rel="stylesheet"
-            href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet"
-            href="{{ asset('assets/vendor/components-font-awesome/css/font-awesome.css') }}">
     </head>
     <body>
-        <i class="fa fa-camera-retro"></i> fa-camera-retro
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}
+        
+        {% endblock %}
+        {% block javascripts %}
+        
+        {% endblock %}
     </body>
 </html>
