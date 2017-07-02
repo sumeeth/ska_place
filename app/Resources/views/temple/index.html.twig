@@ -2,7 +2,6 @@
 
 {% block body %}
     <h1>Temples list</h1>
-<i class="fa fa-camera-retro"></i> fa-camera-retro
     <table>
         <thead>
             <tr>
@@ -35,7 +34,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('temple_new') }}">Create a new temple</a>
+            <a class="btn" href="{{ path('temple_new') }}" role="button">Create a new temple</a>
         </li>
     </ul>
 {% endblock %}
