@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <title>SKA HomePage</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}          
         {% stylesheets 'assets/vendor/bootstrap/dist/css/bootstrap.min.css' filter='cssrewrite'
-               'assets/vendor/components-font-awesome/css/font-awesome.css'%}
+                       'assets/vendor/components-font-awesome/css/font-awesome.css' filter='cssrewrite' %}
                <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
         {% endblock %}
@@ -14,9 +16,15 @@
     <body>
         {% block body %}
         
-        {% endblock %}
+          
+    {% endblock %}    
         {% block javascripts %}
-        
+            {% javascripts 
+                'assets/vendor/jquery/dist/jquery.min.js'
+                'assets/vendor/bootstrap/dist/js/bootstrap.min.js'
+            %}
+                <script type="text/javascript" src="{{ asset_url }}"></script>
+            {% endjavascripts %}
         {% endblock %}
     </body>
-</html>
+ </html> 

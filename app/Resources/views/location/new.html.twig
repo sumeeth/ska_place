@@ -5,12 +5,14 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" class="btn btn-primary"/>
-    {{ form_end(form) }}
+        <div class="btn-group">
+        <input type="submit" value="Create" class="btn btn-primary"/><span class="glyphicon glyphicon-ok"></span>
+        {{ form_end(form) }}
 
     <ul>
         <li>
-            <a class="btn" href="{{ path('location_index') }}" role="button">Back to the list</a>
+            <a class="btn btn-primary" href="{{ path('location_index') }}" role="button">Back to the list</a>
         </li>
     </ul>
+        </div>
 {% endblock %}
