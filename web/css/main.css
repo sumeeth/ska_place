@@ -80,4 +80,13 @@ and open the template in the editor.
     .divider{
         color: red;
     }
+    .affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+      
+  }
 }
