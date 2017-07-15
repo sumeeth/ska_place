@@ -2,11 +2,12 @@
 
 {% block body %}
     <h1>This page title </h1>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <!--- vvv Hamburger icon that gets shown when window reaches a certain scale vvv --->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -17,28 +18,37 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Home</a></li>
                 <!--- vvv Create a divider in the nav vvv --->
                 <li class="divider"></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/about">About</a></li>
                 <!--- vvv Create a divider in the nav vvv --->
                 <li class="divider"></li>
                 <li><a href="/location">Location</a></li>
                 <li class="divider"></li>
-                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <!--- vvv Create a submenu in the navbar vvv --->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing Stuff <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Testing Stuff <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">SubItem</a></li>
                         <li><a href="#">Something Sub-y</a></li>
+                        <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
                 <!--- ^^^ Create a submenu in the navbar ^^^ --->
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../navbar/">Default</a></li>
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+              </ul>
         </div>
     </div>
-</div>
+</nav>
             <div class="container">
 
           <div class="jumbotron">
@@ -53,6 +63,4 @@
         </div> <!-- /container -->                  
                         
                        
-{% endblock %}
-
-
+{% endblock %}         
