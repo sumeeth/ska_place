@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-// Add active class to active navigation link
 $(document).ready(function () {
     $('#myCarousel').carousel({ interval: 2500, pause: "hover", wrap: false, keyboard: true });
 });
