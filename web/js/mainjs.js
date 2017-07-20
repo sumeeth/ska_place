@@ -5,4 +5,5 @@
  */
 $(document).ready(function () {
     $('#myCarousel').carousel({ interval: 2500, pause: "hover", wrap: false, keyboard: true });
+    $('#locationsList').DataTable();
 });
