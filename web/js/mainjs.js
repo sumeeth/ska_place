@@ -8,4 +8,5 @@ $(document).ready(function () {
     $('#locationsList').DataTable();
     $('#appbundle_location_roadNumber').attr("title", "Enter road or street number");
     $('#appbundle_location_roadNumber').tooltip();
+    $('#currentDateTime').text(moment().format('LLLL'));
 });
