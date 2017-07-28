@@ -10,6 +10,8 @@
             'assets/vendor/bootstrap/dist/css/bootstrap.min.css'
             'assets/vendor/components-font-awesome/css/font-awesome.min.css'
             'assets/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css'
+            'assets/vendor/slick-carousel/slick/slick-theme.css'
+            'assets/vendor/slick-carousel/slick/slick.css'
             'css/main.css'            
             filter='cssrewrite' output='css/compiled/app.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
@@ -123,6 +125,7 @@
   <h1>Some text to enable scrolling</h1>
   <h1>Some text to enable scrolling</h1>
 </div> 
+  BOOTSTRAP CAROUSEL
   <!-- carousel -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -169,7 +172,35 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-          
+  SLICK CAROUSEL 
+  <!-- slick carousel code sstarts here -->
+ <div class="slikCarousel">
+    <div class="item active">
+      <img src="../images/DSC_0196.JPG" alt="this is first image">
+      <div class="carousel-caption">
+        pic 1
+      </div>
+    </div>
+    <div class="item">
+      <img src="../images/DSC_0252.JPG" alt="this is second image">
+      <div class="carousel-caption">
+        pic 1
+      </div>
+    </div>
+    <div class="item">
+      <img src="../images/DSC_0277.JPG" alt="this is second image">
+      <div class="carousel-caption">
+        pic 1
+      </div>
+    </div>
+      <div class="item">
+      <img src="../images/DSC_0277-001.JPG" alt="this is second image">
+      <div class="carousel-caption">
+        pic 1
+      </div>
+    </div>
+  </div>
+    
     {% endblock %}    
         {% block javascripts %}
             {% javascripts 
@@ -178,6 +209,7 @@
                 'assets/vendor/datatables.net/js/jquery.dataTables.min.js'
                 'assets/vendor/datatables.net-bs/js/dataTables.bootstrap.min.js'
                 'assets/vendor/moment/min/moment.min.js'
+                'assets/vendor/slick-carousel/slick/slick.js'
                 'js/mainjs.js'
             %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>         
